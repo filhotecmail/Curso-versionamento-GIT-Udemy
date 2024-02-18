@@ -26,6 +26,18 @@ O Git armazena suas configurações em um arquivo de configuração. Esse arquiv
 - **Local:** Armazena configurações específicas de um repositório Git específico. Está localizado dentro do diretório `.git` do repositório.
 - **Sistema:** Armazena configurações específicas do sistema que se aplicam a todos os usuários e repositórios Git em um sistema. Está localizado em `/etc/gitconfig`.
 
+## Vamos configurar seu Arquivo de configuração GIT de forma Global
+ Após a instalação do Git, é recomendável configurar alguns elementos, como a identificação do usuário, que será associada a cada commit feito no Git.
+ Para evitar a necessidade de configurar essa identificação em cada repositório Git individualmente, o texto sugere que você pode fazer essa configuração de forma global. Isso significa que você pode definir suas informações de identificação uma vez e elas serão 
+ aplicadas a todos os repositórios Git em sua máquina.
+
+Para realizar essa configuração global, você pode criar um arquivo chamado .gitconfig na raiz do diretório do seu usuário home. Neste arquivo, você pode definir configurações como seu nome de usuário e endereço de e-mail associado ao seu perfil Git. Essas configurações serão então aplicadas a todos os seus repositórios Git, garantindo consistência em seus commits e facilitando o trabalho em vários projetos.
+
+```bash
+git config --global user.name "Seu Nome e Sobrenome"
+git config -- global user.email "seuemail@mail.com"
+```
+
 ### Visualizando conteúdo do arquivo
 
 ```bash
