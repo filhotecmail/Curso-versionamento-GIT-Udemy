@@ -148,6 +148,38 @@ sub   rsa3072 2024-02-18 [E] [expires: 2026-02-17]
 
 ```
 
+Verifique a chave criada.
+
+```bash
+gpg --list-secret-keys --keyid-format=long
+
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2026-02-17
+/home/carlos/.gnupg/pubring.kbx
+-------------------------------
+sec   rsa3072/XXXXXXXXXX7DEBB3 2024-02-18 [SC] [expires: 2026-02-17]
+      XXXXXXXXXXC772F53F9901B28200FDD5DA7DEBB3
+uid                 [ultimate] Carlos Alberto Dias da Silva Filho <email@email@gmail.com>
+ssb   rsa3072/XXXXXXXXXX881A08 2024-02-18 [E] [expires: 2026-02-17]
+
+```
+Este comando gpg --list-secret-keys --keyid-format=long é usado para listar as chaves secretas (privadas) disponíveis no sistema usando o utilitário GnuPG (GPG), que é uma implementação de código aberto do PGP (Pretty Good Privacy), um sistema de criptografia de chave pública.
+
+Aqui está uma explicação da saída:
+
+sec: Indica que a entrada é uma chave secreta (privada).
+rsa3072/XXXXXXXXXX7DEBB3: Identificador da chave, que consiste no algoritmo de criptografia (RSA com comprimento de chave de 3072 bits) seguido pelo identificador único da chave.
+2024-02-18: Data de criação da chave.
+[SC]: Indica que a chave é usada para assinar (S) e criptografar (C).
+[expires: 2026-02-17]: Indica que a chave expira em 17 de fevereiro de 2026.
+XXXXXXXXXXC772F53F9901B28200FDD5DA7DEBB3: O identificador único da chave, usado para referenciar a chave em operações GPG.
+uid [ultimate] Carlos Alberto Dias da Silva Filho <email@email@gmail.com>: A identificação do usuário associado à chave, que inclui o nível de confiança (ultimate), o nome do usuário e o endereço de e-mail.
+ssb: Indica que a entrada é uma subchave.
+rsa3072/XXXXXXXXXX881A08: Identificador da subchave.
+[E]: Indica que a subchave é usada apenas para criptografia de dados.
+[expires: 2026-02-17]: Indica que a subchave expira em 17 de fevereiro de 2026.
   
 #### Recursos Adicionais:
 - Documentação oficial do GnuPG: [https://www.gnupg.org/documentation/](https://www.gnupg.org/documentation/)
