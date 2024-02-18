@@ -134,7 +134,6 @@ O GNU Privacy Guard (GnuPG), comumente referido como `gpg`, é uma ferramenta de
 8. **Aplicações Práticas:**
     - Discussão sobre como o GnuPG é usado em cenários do mundo real, como comunicação segura por e-mail, assinatura de commits em repositórios Git, entre outros.
 
-#### Importância da Aula:
 A compreensão do GnuPG é fundamental para garantir a segurança e integridade dos dados em ambientes digitais. Saber como criar e gerenciar chaves de criptografia, bem como usar assinaturas digitais para verificar a autenticidade dos dados, é essencial para proteger informações sensíveis contra acesso não autorizado e adulteração.
 
 > "Dominar o uso do GnuPG oferece a capacidade de proteger informações confidenciais, garantir a autenticidade dos dados e manter a privacidade online."
