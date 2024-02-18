@@ -47,7 +47,7 @@ git config --global user.phone "99999999"
 [user]
         name = Seu Nome e Sobrenome
         email = seuemail@mail.com
-        fone = 9999999999
+        phone = 9999999999
 ```
 
 ### Visualizando conteúdo do arquivo
