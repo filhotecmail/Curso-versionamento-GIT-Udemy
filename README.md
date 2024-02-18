@@ -63,7 +63,7 @@ $ cat .gitconfig
 [user]
 	name = Firstname Lastname
 	email = firstname.lastname@mail.com
-        fone = 9999999999
+        phone = 9999999999
 ```
 
 ## Comando `git config`:
