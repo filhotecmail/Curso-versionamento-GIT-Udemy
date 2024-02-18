@@ -105,39 +105,50 @@ O GNU Privacy Guard (GnuPG), comumente referido como `gpg`, é uma ferramenta de
 
 > "O GnuPG é uma ferramenta poderosa para garantir a segurança dos dados por meio de criptografia e assinaturas digitais."
 
-#### Tópicos Abordados:
-1. **O que é o GnuPG?**
-    - Explicação sobre o GNU Privacy Guard e sua importância na segurança de dados.
+### Criação de Chaves de Criptografia
 
-2. **Instalação do GnuPG:**
-    - Demonstração de como instalar o GnuPG no sistema operacional (Linux, Windows, macOS).
+```
+ gpg --full-generate-key
 
-3. **Criação de Chaves de Criptografia:**
-    - Passos para gerar um par de chaves pública e privada.
-    - Explicação sobre a importância de proteger a chave privada.
+Email address: email@email@gmail.com
+You selected this USER-ID:
+    "sudo gpg --full-generate-key <email@email@gmail.com>"
 
-4. **Gerenciamento de Chaves:**
-    - Como listar, exportar, importar e revogar chaves.
-    - Importância de fazer backup das chaves.
+```
 
-5. **Criptografia de Dados:**
-    - Processo de criptografar arquivos usando o GnuPG.
-    - Como descriptografar arquivos criptografados.
+Ele vai perguntar se você quer também criar a propriedade Realname, em seguida vai pedir para voce criar uma senha para a chave.
 
-6. **Assinatura Digital:**
-    - Explicação sobre o conceito de assinaturas digitais e sua importância na verificação da autenticidade dos dados.
-    - Demonstração de como assinar e verificar a assinatura de arquivos usando o GnuPG.
+```
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? n
+Real name: Carlos Alberto Dias da Silva Filho
+You selected this USER-ID:
+    "Carlos Alberto Dias da Silva Filho <email@email@gmail.com>"
 
-7. **Uso Avançado:**
-    - Exploração de recursos avançados, como configuração de confiança, uso de subchaves e criação de anéis de chaves personalizados.
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
 
-8. **Aplicações Práticas:**
-    - Discussão sobre como o GnuPG é usado em cenários do mundo real, como comunicação segura por e-mail, assinatura de commits em repositórios Git, entre outros.
+gpg: /home/carlos/.gnupg/trustdb.gpg: trustdb created
 
-A compreensão do GnuPG é fundamental para garantir a segurança e integridade dos dados em ambientes digitais. Saber como criar e gerenciar chaves de criptografia, bem como usar assinaturas digitais para verificar a autenticidade dos dados, é essencial para proteger informações sensíveis contra acesso não autorizado e adulteração.
+gpg: key XXXXXXXXXX7DEBB3 marked as ultimately trusted
+gpg: directory '/home/carlos/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/home/carlos/.gnupg/openpgp-revocs.d/XXXXXXXXXXXC772F53F9901B28200FDD5DA7DEBB3.rev'
+public and secret key created and signed.
 
-> "Dominar o uso do GnuPG oferece a capacidade de proteger informações confidenciais, garantir a autenticidade dos dados e manter a privacidade online."
+pub   rsa3072 2024-02-18 [SC] [expires: 2026-02-17]
+      XXXXXXXXXXXC772F53F9901B28200FDD5DA7DEBB3
+uid                      Carlos Alberto Dias da Silva Filho <email@email@gmail.com>
+sub   rsa3072 2024-02-18 [E] [expires: 2026-02-17]
 
+```
+
+  
 #### Recursos Adicionais:
 - Documentação oficial do GnuPG: [https://www.gnupg.org/documentation/](https://www.gnupg.org/documentation/)
 - Tutoriais online e guias práticos sobre o uso do GnuPG.
