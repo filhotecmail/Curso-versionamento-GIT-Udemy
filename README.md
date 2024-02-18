@@ -5,9 +5,10 @@ Repositório criado para treimanento e aulas do curso de GIT da Udemy
 
 Ubuntu 22.04 TLS 
 
-O Ubuntu é um sistema operacional, que é basicamente o software que controla um computador e permite que você use programas nele. É como o cérebro do computador.
-
-O "22.04 LTS" se refere à versão específica do Ubuntu. "22.04" significa que foi lançado em abril de 2022. "LTS" significa "Long Term Support" (Suporte de Longo Prazo). Isso significa que essa versão do Ubuntu receberá atualizações e correções de segurança por um período prolongado, geralmente cerca de 5 anos. Isso é importante porque garante que o sistema seja seguro e estável por um longo tempo.
+O Ubuntu é um sistema operacional baseado em linux kernel.
+O "22.04 LTS" se refere à versão específica do Ubuntu. "22.04" significa que foi lançado em abril de 2022. "LTS" significa "Long Term Support" (Suporte de Longo Prazo). 
+Isso significa que essa versão do Ubuntu receberá atualizações e correções de segurança por um período prolongado, geralmente cerca de 5 anos. 
+Isso é importante porque garante que o sistema seja seguro e estável por um longo tempo.
 Por padrão ao instalar o Ubuntu, o Git já vem instalado.
 
 Verificando a versão instalada do git
@@ -24,6 +25,21 @@ O Git armazena suas configurações em um arquivo de configuração. Esse arquiv
 - **Global:** Armazena configurações específicas do usuário e se aplicam a todos os repositórios Git em um sistema. Geralmente está localizado em `~/.gitconfig`.
 - **Local:** Armazena configurações específicas de um repositório Git específico. Está localizado dentro do diretório `.git` do repositório.
 - **Sistema:** Armazena configurações específicas do sistema que se aplicam a todos os usuários e repositórios Git em um sistema. Está localizado em `/etc/gitconfig`.
+
+### Visualizando conteúdo do arquivo
+
+```bash
+ cat .gitconfig
+```
+A saída deverá ser equivalente á
+
+```bash
+$ cat .gitconfig
+ 
+[user]
+	name = Firstname Lastname
+	email = firstname.lastname@mail.com
+```
 
 ## Comando `git config`:
 O comando `git config` é usado para definir, visualizar ou modificar configurações do Git. Ele oferece várias opções para manipular as configurações. Aqui estão algumas das opções mais comuns:
