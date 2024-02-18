@@ -26,6 +26,22 @@ O Git armazena suas configurações em um arquivo de configuração. Esse arquiv
 - **Local:** Armazena configurações específicas de um repositório Git específico. Está localizado dentro do diretório `.git` do repositório.
 - **Sistema:** Armazena configurações específicas do sistema que se aplicam a todos os usuários e repositórios Git em um sistema. Está localizado em `/etc/gitconfig`.
 
+## Comando `git config`:
+O comando `git config` é usado para definir, visualizar ou modificar configurações do Git. Ele oferece várias opções para manipular as configurações. Aqui estão algumas das opções mais comuns:
+- `git config --global <chave> <valor>`: Define uma configuração global do Git.
+- `git config --local <chave> <valor>`: Define uma configuração local específica para um repositório.
+- `git config --system <chave> <valor>`: Define uma configuração do sistema do Git.
+- `git config --get <chave>`: Obtém o valor de uma chave específica.
+- `git config --unset <chave>`: Remove uma configuração específica.
+- `git config --list`: Lista todas as configurações.
+
+## Propriedades do Arquivo de Configuração:
+O arquivo de configuração do Git consiste em pares de chave e valor. As chaves representam as configurações e os valores são suas respectivas configurações. Algumas das propriedades mais comuns incluem:
+- `user.name`: Nome do usuário.
+- `user.email`: Endereço de e-mail do usuário.
+- `core.editor`: Editor de texto padrão para mensagens de commit.
+- `alias`: Atalhos para comandos Git.
+
 ## Vamos configurar seu Arquivo de configuração GIT de forma Global
  Após a instalação do Git, é recomendável configurar alguns elementos, como a identificação do usuário, que será associada a cada commit feito no Git.
  Para evitar a necessidade de configurar essa identificação em cada repositório Git individualmente, o texto sugere que você pode fazer essa configuração de forma global. Isso significa que você pode definir suas informações de identificação uma vez e elas serão 
@@ -66,18 +82,4 @@ $ cat .gitconfig
         phone = 9999999999
 ```
 
-## Comando `git config`:
-O comando `git config` é usado para definir, visualizar ou modificar configurações do Git. Ele oferece várias opções para manipular as configurações. Aqui estão algumas das opções mais comuns:
-- `git config --global <chave> <valor>`: Define uma configuração global do Git.
-- `git config --local <chave> <valor>`: Define uma configuração local específica para um repositório.
-- `git config --system <chave> <valor>`: Define uma configuração do sistema do Git.
-- `git config --get <chave>`: Obtém o valor de uma chave específica.
-- `git config --unset <chave>`: Remove uma configuração específica.
-- `git config --list`: Lista todas as configurações.
 
-## Propriedades do Arquivo de Configuração:
-O arquivo de configuração do Git consiste em pares de chave e valor. As chaves representam as configurações e os valores são suas respectivas configurações. Algumas das propriedades mais comuns incluem:
-- `user.name`: Nome do usuário.
-- `user.email`: Endereço de e-mail do usuário.
-- `core.editor`: Editor de texto padrão para mensagens de commit.
-- `alias`: Atalhos para comandos Git.
