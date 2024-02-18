@@ -45,8 +45,8 @@ por exemplo
 git config --global user.phone "99999999"
 
 [user]
-        name = Carlos Alberto Dias da Silva Filho
-        email = filhotecmail@gmail.com
+        name = Seu Nome e Sobrenome
+        email = seuemail@mail.com
         fone = 9999999999
 ```
 
@@ -63,6 +63,7 @@ $ cat .gitconfig
 [user]
 	name = Firstname Lastname
 	email = firstname.lastname@mail.com
+        fone = 9999999999
 ```
 
 ## Comando `git config`:
