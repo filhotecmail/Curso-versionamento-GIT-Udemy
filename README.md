@@ -37,6 +37,18 @@ Para realizar essa configuração global, você pode criar um arquivo chamado .g
 git config --global user.name "Seu Nome e Sobrenome"
 git config -- global user.email "seuemail@mail.com"
 ```
+## Nota
+No arquivo de configuração do Git (geralmente chamado .gitconfig), você pode definir propriedades personalizadas, além das propriedades padrão fornecidas pelo Git. Isso permite que você armazene informações adicionais que podem ser úteis para seu fluxo de trabalho ou para a integração com outras ferramentas.
+
+por exemplo
+```bash
+git config --global user.phone "99999999"
+
+[user]
+        name = Carlos Alberto Dias da Silva Filho
+        email = filhotecmail@gmail.com
+        fone = 9999999999
+```
 
 ### Visualizando conteúdo do arquivo
 
