@@ -81,5 +81,17 @@ $ cat .gitconfig
 	email = firstname.lastname@mail.com
         phone = 9999999999
 ```
+# Aula 2 - Assinatura dos commits
+
+Nesta aula, aprenderemos sobre a configuração avançada de commits assinados no Git. Assinar seus commits é uma prática altamente recomendada para garantir a integridade e autenticidade do código que você está contribuindo para um repositório. 
+Usaremos o utilitário gpg para gerar uma chave e assinar nossos commits.
+
+### Por que assinar commits?
+A assinatura de commits é importante por várias razões:
+
+- `Integridade dos Commits:` Garante que os commits não foram adulterados desde que foram criados, fornecendo uma camada adicional de segurança.
+- `Autenticidade:` Confirma que os commits foram realmente feitos por você e não por outra pessoa, impedindo a falsificação de identidade.
+- `Confiança na Colaboração:` Ao assinar seus commits, você constrói confiança com outros colaboradores e mantenedores de projetos, mostrando que você é o verdadeiro autor das alterações.
+
 
 
