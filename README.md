@@ -215,6 +215,25 @@ Normalmente, o Git usa o programa GPG padrão instalado no seu sistema para lida
 
 Por exemplo, se você estiver usando o PGP (Pretty Good Privacy) em vez do GPG, pode configurar o Git para usar o PGP com este comando.
 
+A Saída agora deverá ser equivalente a essa.
+
+```
+ cat .gitconfig
+[user]
+        name = Seu Nome
+        email = seuemail@mail.com
+        fone = 9999999999
+[commit]
+        gpgsign = true
+[gpg]
+        program = pgp
+
+```
+
+### Gravando a KEY gerada no arquivo de configurações
+
+
+
   
 #### Recursos Adicionais:
 - Documentação oficial do GnuPG: [https://www.gnupg.org/documentation/](https://www.gnupg.org/documentation/)
