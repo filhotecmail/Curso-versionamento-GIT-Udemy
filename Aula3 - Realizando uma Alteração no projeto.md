@@ -42,14 +42,13 @@ Ao fazer um commit com assinatura GPG, você está adicionando uma camada extra 
 
 Para fazer um commit com assinatura GPG, você precisa configurar corretamente o Git com sua chave GPG e, em seguida, usar o parâmetro `-S` ou `--gpg-sign` ao fazer o commit. Isso instruirá o Git a assinar o commit usando sua chave GPG configurada.
 
-### Exemplo de Comando Commit com Assinatura GPG em Markdown
+### Exemplo de Comando Commit com Assinatura GPG
 
 
 ```bash
  git commit -S -m "Mensagem do commit assinada com GPG"
  
  ```
-
 
 **Neste exemplo:**
 
