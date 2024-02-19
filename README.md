@@ -231,7 +231,10 @@ A Saída agora deverá ser equivalente a essa.
 
 ### Gravando a KEY gerada no arquivo de configurações
 
-
+```bash
+git config --global user.signingkey XXXXXXXXXX7DEBB3
+```
+Esse comando configura globalmente a chave GPG que o Git usará para assinar commits. O número "XXXXXXXXXX7DEBB3" é o identificador da chave GPG que você deseja usar para assinar seus commits. Quando você faz um commit em um repositório Git após executar esse comando, o Git usará essa chave GPG específica para criar uma assinatura para o commit, garantindo assim que ele tenha sido feito por você.
 
   
 #### Recursos Adicionais:
