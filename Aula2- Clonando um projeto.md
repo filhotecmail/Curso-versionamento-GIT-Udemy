@@ -25,5 +25,13 @@ Inicialização do diretório como um repositório Git: O Git inicializa o diret
 Nessa aula iremos clonar este repositório na máquina linux.
 
 ```
-git clone git@github.com:filhotecmail/Curso-versionamento-GIT-Udemy.git
+ git clone https://github.com/filhotecmail/Curso-versionamento-GIT-Udemy.git
+
+Cloning into 'Curso-versionamento-GIT-Udemy'...
+remote: Enumerating objects: 76, done.
+remote: Counting objects: 100% (76/76), done.
+remote: Compressing objects: 100% (75/75), done.
+remote: Total 76 (delta 22), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (76/76), 42.93 KiB | 293.00 KiB/s, done.
+
 ```
