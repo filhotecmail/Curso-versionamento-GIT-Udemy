@@ -236,6 +236,67 @@ git config --global user.signingkey XXXXXXXXXX7DEBB3
 ```
 Esse comando configura globalmente a chave GPG que o Git usará para assinar commits. O número "XXXXXXXXXX7DEBB3" é o identificador da chave GPG que você deseja usar para assinar seus commits. Quando você faz um commit em um repositório Git após executar esse comando, o Git usará essa chave GPG específica para criar uma assinatura para o commit, garantindo assim que ele tenha sido feito por você.
 
+Ao final podemos observar o arquivo de configuração.
+
+```
+ cat .gitconfig
+[user]
+        name = Seu Nome
+        email = seuemail@mail.com        
+        signingkey = XXXXXXXXXX7DEBB3
+[commit]
+        gpgsign = true
+[gpg]
+        program = pgp
+```
+
+### Extraindo a chave para infomar ao provedor GIT em Cloud
+
+```
+gpg --armor --export XXXXXXXXXX7DEBB3
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQGNBGXSkOkBDADAeUTMm+1w9B1Jb/Ld5qLmEixuYc0lgz7iqtyVBDLjHiJ6GJvB
+5EFevNNxgB/wdaeOMEFsfJsmvfSTpJJln21SVpbph/QD9e3VojIHWqF9LeJHNyuA
+jDF5p+DhzmVp/u2MYYBGApHKSemoifLZyzGntDyx0mODEmmMM2Wxedjf5ka2h1ig
+Vb+ZiyHtZELADSpfKasul5a9Fsp1WpfHMmvuOe9Wl92JgJc0WIkqe6haKKT/4AYD
+sjUmI14JwVMQj8Kr6ux+q1Gj67z5YIgY/XST27TYXNDSPnDSit3s4FK00NY7hZ9E
+kQHuLS5oHiIUYfed/dkJNi0rAOUi6JR3ihaRfBrauaPQ4ubz6pXtejBMdbOIXT+I
+bTckt7k6BbLsRK22m2gDFEligZH1WzU1tihigay9XIccbcmXtlJhVJLpytLqLVe6
+slK/aeStLOSFJ/xWlB7EUFC/+8PUY2ug3C/lXoDAqlF1k5+n0J07YZZga/E8LHuJ
+WZcdoXTuhvMB8esAEQEAAbQ7Q2FybG9zIEFsYmVydG8gRGlhcyBkYSBTaWx2YSBG
+aWxobyA8ZmlsaG90ZWNtYWlsQGdtYWlsLmNvbT6JAdQEEwEKAD4WIQSWUGBAOcdy
+9T+ZAbKCAP3V2n3rswUCZdKQ6QIbAwUJA8JnAAULCQgHAgYVCgkICwIEFgIDAQIe
+AQIXgAAKCRCCAP3V2n3rs/fVDACFQlSl8O0u62wUkECXaIcrfcCMLlCeq8AZzy5j
+hdMJ3LvH3oKnrcXyfo31d1SCXsU+zGP4eQzYMygbqFBapBLBOqdM/BJm5FCHsooW
+JmVnfNmbsP3hWkOgTwA/a3gPdR6A/12SKD4YiCB3jRawy8kdTsIBRUg0uwuZRr5q
+qgjdHU0h5QGT+tVqzXh4sy/r2XE4m2uEdd3o9cPQdf5cpOVrAuI7RXNw7XtEwyT5
+8XeSqRd6Ob7LN9Qf2mkLEEKFeFRhUJIpYrKaf3cXaIARJOOBtZlv8gPjjfIuehx9
+mc34y654AAcznBkPc9XqG76FVRUEuGCoeitmE+UMfjNbX5qnDY0B5oXJkSEsID5r
+NX9tYCtqnkm+kb9L+SqznI9flqV4YoLFddl1B+o3dEuAgpdqdfCgnDbmdQktxLgI
+1CZ+FywdvFa6dsrnA5goK2QktBOP+05+EGGchaQx6wARAQABiQG8BBgBCgAmFiEE
+llBgQDnHcvU/mQGyggD91dp967MFAmXSkOkCGwwFCQPCZwAACgkQggD91dp967Md
+Twv/eg9+5nvWxlDQfP/pu6v5FKoozQDjDgBzBwABDFOR9318+BQPw40MESgZ98Ff
+A1dewBQ+ix/op2LLQ6+0UorrBCUPorxQGPpoXfOyuqEq+hfI1e5L8Gb0/bsNgv0q
+qrR/XF8qrwak1ZaJ31xFKAlkYuP0HyMFlMQuua0J883MlU2puLkkskXxvLuXAWQF
+zO4GSEz7Z+quW6bykNG57eFLUyDA4vIXOAorSY3Je4gjJ12IqbAKU8P2KoQtwHop
+xej2FWuQaRGI2Q3fO0HbW95UqJO0hQO7cT5JLDr1Q8tUloi27ZfJ4bHDDTnhC+4z
+uYcsHEWDI2v8+5QQ5eV4k5eTQURexzj7oTgh6vzRPDzGQ40PKGlaSeE9ypaSzUm/
+0tWAtAhmY9q0WXqrYcfGhwDaG2KbHytE8dMasWwBf5rGXnUdSDKxgJxFHmhrs6A9
+obXkZHs9VU592WC+QXvQVep9qodLrv5mOGebDMqrnt+WQ5Wj+WLs5gQwOSa8ZcGJ
+UuRl
+=R85j
+-----END PGP PUBLIC KEY BLOCK-----
+```
+O comando gpg --armor --export é utilizado para exportar uma chave pública GPG identificada pelo ID "ABCDEFGHIJKLMNOP" em um formato de texto legível. Aqui está uma explicação detalhada do comando e de suas opções:
+
+- `gpg:` Este é o comando principal do GNU Privacy Guard (GPG), uma ferramenta de criptografia usada para criptografar, descriptografar, assinar e verificar dados.
+- `--armor ou -a:` Esta opção instrui o GPG a gerar a saída no formato ASCII-armored. Isso significa que a chave será codificada em um formato de texto legível, tornando-a adequada para compartilhamento por e-mail ou em outros meios que suportam apenas texto.
+
+- `--export:` Esta opção indica ao GPG para exportar uma chave. Quando combinada com um ID de chave, como "ABCDEFGHIJKLMNOP", o GPG exportará a chave correspondente.
+
+- `XXXXXXXXXX7DEBB3`: Este é o ID da chave pública que você deseja exportar. No mundo real, este seria um identificador único associado à chave pública que você deseja compartilhar com outros usuários.
   
 #### Recursos Adicionais:
 - Documentação oficial do GnuPG: [https://www.gnupg.org/documentation/](https://www.gnupg.org/documentation/)
