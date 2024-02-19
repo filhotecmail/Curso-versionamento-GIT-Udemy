@@ -294,7 +294,7 @@ O comando gpg --armor --export é utilizado para exportar uma chave pública GPG
 - `gpg:` Este é o comando principal do GNU Privacy Guard (GPG), uma ferramenta de criptografia usada para criptografar, descriptografar, assinar e verificar dados.
 - `--armor ou -a:` Esta opção instrui o GPG a gerar a saída no formato ASCII-armored. Isso significa que a chave será codificada em um formato de texto legível, tornando-a adequada para compartilhamento por e-mail ou em outros meios que suportam apenas texto.
 
-- `--export:` Esta opção indica ao GPG para exportar uma chave. Quando combinada com um ID de chave, como "ABCDEFGHIJKLMNOP", o GPG exportará a chave correspondente.
+- `--export:` Esta opção indica ao GPG para exportar uma chave. Quando combinada com um ID de chave, como "XXXXXXXXXX7DEBB3", o GPG exportará a chave correspondente.
 
 - `XXXXXXXXXX7DEBB3`: Este é o ID da chave pública que você deseja exportar. No mundo real, este seria um identificador único associado à chave pública que você deseja compartilhar com outros usuários.
   
