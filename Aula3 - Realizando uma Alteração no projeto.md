@@ -44,12 +44,10 @@ Para fazer um commit com assinatura GPG, você precisa configurar corretamente o
 
 ### Exemplo de Comando Commit com Assinatura GPG
 
-
 ```bash
  git commit -S -m "Mensagem do commit assinada com GPG"
  
  ```  
-
 **Neste exemplo:**
 
 - `git commit:` Este é o comando principal para fazer um commit no Git.
