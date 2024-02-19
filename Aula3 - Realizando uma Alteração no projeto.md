@@ -48,7 +48,7 @@ Para fazer um commit com assinatura GPG, você precisa configurar corretamente o
 ```bash
  git commit -S -m "Mensagem do commit assinada com GPG"
  
- ```
+ ``` 
  
 
 **Neste exemplo:**
