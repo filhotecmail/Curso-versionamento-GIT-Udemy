@@ -201,6 +201,19 @@ $ cat .gitconfig
         gpgsign = true
 ```
 
+Definindo o programa padrão do GIT para GPG
+
+```bash
+
+git config --global gpg.program pgp
+
+```
+
+O comando ```git config --global gpg.program pgp``` configura o programa que o Git usará para operações GPG (GNU Privacy Guard) como "pgp".
+
+Normalmente, o Git usa o programa GPG padrão instalado no seu sistema para lidar com operações de assinatura, criptografia, etc. No entanto, ao configurar gpg.program como "pgp", você está especificando um programa diferente para ser usado. Isso pode ser útil se você estiver usando um software de terceiros para lidar com operações GPG em vez do GPG padrão.
+
+Por exemplo, se você estiver usando o PGP (Pretty Good Privacy) em vez do GPG, pode configurar o Git para usar o PGP com este comando.
 
   
 #### Recursos Adicionais:
