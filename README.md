@@ -221,8 +221,7 @@ A Saída agora deverá ser equivalente a essa.
  cat .gitconfig
 [user]
         name = Seu Nome
-        email = seuemail@mail.com
-        fone = 9999999999
+        email = seuemail@mail.com        
 [commit]
         gpgsign = true
 [gpg]
