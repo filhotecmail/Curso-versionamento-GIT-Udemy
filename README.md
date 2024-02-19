@@ -180,6 +180,28 @@ Este comando gpg ```--list-secret-keys --keyid-format=long ``` é usado para lis
 - `rsa3072/XXXXXXXXXX881A08:` Identificador da subchave.
 - `[E]:` Indica que a subchave é usada apenas para criptografia de dados.
 - `[expires: 2026-02-17]:` Indica que a subchave expira em 17 de fevereiro de 2026.
+
+### Adicionando a chave à sua configuração Git no ficheiro .gitconfig
+
+```
+git config --global commit.gpgsign true
+
+```
+Esse comando configura o Git globalmente para assinar automaticamente seus commits com GPG (GNU Privacy Guard). Quando você faz um commit em um repositório Git após executar esse comando, o Git solicitará a assinatura usando a chave GPG configurada em sua máquina. Isso ajuda a garantir a autenticidade e integridade dos seus commits, fornecendo uma forma de verificar se os commits foram feitos por você e se não foram adulterados.
+
+se você visualizar agora as configurações, terá uma saída equivalente a esta no arquivo de configurações.
+
+```
+$ cat .gitconfig
+
+[user]
+        name = Seu Nome
+        email = seuemail@mail.com        
+[commit]
+        gpgsign = true
+```
+
+
   
 #### Recursos Adicionais:
 - Documentação oficial do GnuPG: [https://www.gnupg.org/documentation/](https://www.gnupg.org/documentation/)
